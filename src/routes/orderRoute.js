@@ -1,13 +1,11 @@
-'use strict'
+'use strict';
 
 const express = require('express');
 const router = express.Router();
-const order = require('../controllers/orderController');
+const controller = require('../controllers/orderController');
+const authService = require('../services/authService');
 
+router.get('/', authService.authorize, controller.get);
+router.post('/', authService.authorize, controller.post);
 
-router.post('/' , order.post);
-router.get('/' , order.get);
-
-
-
-module.exports = router
+module.exports = router;
