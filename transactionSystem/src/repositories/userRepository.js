@@ -1,7 +1,6 @@
 'use strict'
 
 const mongoose = require('mongoose');
-mongoose.connect('key')
 
 const User = mongoose.model('User');
 
