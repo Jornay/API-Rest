@@ -1,8 +1,13 @@
 'use strict'
+const controller = require("../controllers/userController");
 
 const express = require('express');
 const router = express.Router();
-mongoose.connect('key')
 
+router.get('/', (request, response) => {
+    return response.send('Testado com sucesso');
+})
 
 router.post('/user', controller.post);
+
+module.exports = router

@@ -11,7 +11,7 @@ exports.post = async(req,res,next) => {
             password: req.body.password,
             CPF : req.body.cpf,
         })
-        req.status(201).send({messege: 'Usuário criado com sucesso.'});
+        res.status(201).send({messege: 'Usuário criado com sucesso.'});
     }
     catch(e){
         res.status(501).send({
